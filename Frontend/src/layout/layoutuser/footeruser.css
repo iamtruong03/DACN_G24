@@ -1,0 +1,73 @@
+.ff {
+  margin-bottom: 150px;
+  margin-left: 150px;
+  margin-right: 100px;
+  height: 10px;
+}
+.ff .col-4 h3 {
+  margin-left: 10px;
+  font-weight: bold;
+}
+.ff h3 {
+  font-size: 16px;
+  color: #183544;
+  font-weight: 400;
+  line-height: 2.2em;
+  margin-bottom: 15px;
+  float: left;
+  width: 538px;
+  margin: 0;
+}
+.ff img {
+  margin: 2px;
+}
+.footer {
+  background-color: rgb(244, 244, 244);
+}
+.footer .footer1 .row {
+  padding-top: 50px;
+  padding-left: 140px;
+  padding-right: 200px;
+  padding-bottom: 30px;
+  width: 1519px;
+}
+.footer .footer1 .row h1 {
+  width: 256px;
+  font-size: 14px;
+  color: #606060;
+  font-weight: 300;
+  line-height: 20px;
+  height: 40px;
+  margin: 0;
+  font-family: Roboto-Regular, 'Helvetica Neue', Helvetica, Tahoma, Arial,
+    Sans-serif;
+}
+.footer .footer1 .row span {
+  color: rgb(136, 136, 136);
+  background-color: rgb(244, 244, 244);
+  font-size: 12px;
+  float: left;
+}
+.footer .footer1 .row a {
+  background-color: rgb(244, 244, 244);
+  font-size: 12px;
+  float: left;
+  text-decoration: none;
+  color: #606060;
+}
+.footer .footer1 .row .bm {
+  height: 20px;
+  font-size: 14px;
+  color: #606060;
+  font-weight: 300;
+  line-height: 20px;
+  margin: 0 0 5px;
+  font-family: Roboto-Regular, 'Helvetica Neue', Helvetica, Tahoma, Arial,
+    Sans-serif;
+  float: left;
+}
+.imgThanhToan {
+  /* display: block; */
+  border-radius: 10px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}

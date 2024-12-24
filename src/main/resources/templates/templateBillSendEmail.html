@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        p {
+            margin: 2px;
+        }
+
+        .table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .th, .td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+        }
+        .th {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+<div class="container" style="">
+    <div class="" style="text-align: center">
+        <div class="" style="display: flex; text-align: center;font-weight: bold; font-size: 40px">TravelViVu
+        </div>
+        <div class="" style="margin-top: 16px; text-align: center">
+            <p>
+                Hanoi, Hanoi, Vietnam.
+            </p>
+        </div>
+        <div class="" style="margin-top: 5px; text-align: center">
+            <p>
+                SDT: 0123456789
+            </p>
+        </div>
+    </div>
+</div>
+<div class=""
+     style="padding: 20px 10px;border-top-style: dashed; border-width: 1px; border-color: rgb(0, 0, 0);">
+    <div class="">
+        <p style="font-size: 18px; font-weight: 800; margin-bottom: 30px">Thông tin khách hàng </p>
+        <div class="" style="margin-left: 20px; ">
+            <p th:text="${'Họ và tên: ' +  invoice.userName}"></p>
+            <p th:text="${'Số điện thoại: '+((invoice.phoneNumber == null || invoice.phoneNumber == '') ? '' : invoice.phoneNumber)}"></p>
+            <p th:text="${'Email: '+((invoice.email == null || invoice.email == '') ? '' : invoice.email)}"></p>
+            <p th:text="${'Địa chỉ: '+((invoice.addressUser == null || invoice.addressUser == '') ? '' : invoice.addressUser)}"></p>
+        </div>
+    </div>
+</div>
+<div style="padding: 20px 10px;border-top-style: dashed; border-width: 1px; border-color: rgb(0, 0, 0);">
+    <div class="" style="margin-right: 20px;">
+        <p style="font-size: 18px; font-weight: 800; margin-bottom: 30px">Nội dung hóa đơn</p>
+        <table class="table " style="width: 100%">
+            <thead>
+            <td class="th"><strong>Tên homestay</strong></td>
+            <td class="th"><strong>Ngày đặt</strong></td>
+            <td class="th"><strong>Địa chỉ</strong></td>
+            <td class="th"><strong>Từ ngày</strong></td>
+            <td class="th"><strong>Đến ngày</strong></td>
+            <td class="th"><strong>Tổng giá</strong></td>
+            </thead>
+            <tbody>
+            <th:block>
+                <tr>
+                    <td class="td" th:text="${invoice.nameHomestay}"></td>
+                    <td class="td" th:text="${invoice.createdDate}"></td>
+                    <td class="td" th:text="${invoice.addressHomestay}"></td>
+                    <td class="td" th:text="${invoice.startDate}"></td>
+                    <td class="td" th:text="${invoice.endDate}"></td>
+                    <td class="td" th:text="${invoice.sumPrice + ' VND'}"></td>
+                </tr>
+            </th:block>
+            </tbody>
+        </table>
+        <br>
+        <table>
+            <tbody>
+            <tr>
+                <td class="thick-line"><strong>Mã hóa đơn: </strong></td>
+                <td class="thick-line text-end" float="right" th:text="${invoice.code}"></td>
+            </tr>
+            <tr>
+                <td class="border-0 "><strong>Đã thanh toán: </strong></td>
+                <td class="border-0no-line text-end" float="right" th:text="${invoice.totalPrice + ' VND'}"></td>
+            </tr>
+            <tr>
+                <td class="border-0 "><strong>Hình thức: </strong></td>
+                <td class="border-0  text-end" float="right" th:text="${(invoice.typeBooking == 0 ? 'Đặt cọc' : 'Thanh toán trước')}">
+                </td>
+            </tr>
+            <tr>
+                <td class="border-0 "><strong>Phương thức thanh toán: </strong></td>
+                <td class="border-0  text-end" float="right" th:text="${(invoice.paymentMethod == 0 ? 'Paypal' : 'VN Pay')}">
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div style="padding: 20px 10px;border-top-style: dashed; border-width: 1px; border-color: rgb(0, 0, 0);">
+    <div style="font-size: 18px;margin-top: 20px; font-weight: 700; text-align: center; width: 100%">Cám ơn quý khách đã
+        sử dụng dịch vụ của TravelViVu
+    </div>
+    <div>
+        <div class="" style="text-align: center; width: 100%">Quý khách xem thông tin chi tiết homestay</div>
+        </br>
+        <div class="" style="text-align: center; width: 100%">
+            <button style="    background-color: #158722;
+    border: none;
+    border-radius: 6px;
+    padding: 5px 22px;"><a th:href="${url}" style="text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;">Tại đây</a></button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

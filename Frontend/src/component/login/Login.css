@@ -1,0 +1,18 @@
+.divider:after,
+.divider:before {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #eee;
+
+}
+
+.cascading-right {
+    margin-right: -50px;
+}
+
+@media (max-width: 900px) {
+    .cascading-right {
+        margin-right: 0;
+    }
+}

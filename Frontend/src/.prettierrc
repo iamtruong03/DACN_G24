@@ -1,0 +1,22 @@
+{
+    "singleQuote": true,
+    "semi": false,
+    "trailingComma": "all",
+    "jsxSingleQuote": true,
+    "printWidth": 80,
+    "tabWidth": 2,
+    "overrides": [
+        {
+            "files": "*.json",
+            "options": {
+                "printWidth": 120
+            }
+        },
+        {
+            "files": "*.scss",
+            "options": {
+                "singleQuote": false
+            }
+        }
+    ]
+}

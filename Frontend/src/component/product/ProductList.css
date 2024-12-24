@@ -1,0 +1,77 @@
+.awesection1 {
+    position: relative;
+    background-image: url('../../assets/img/bluer.png');
+    background-color: rgba(0, 0, 0, 0.8);
+    background-repeat: no-repeat;
+    background-size: cover, contain;
+}
+
+.border-inpicture {
+    border: 3px solid rgb(145, 144, 144);
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+
+}
+
+.border-inpicture-1 {
+    border: 3px solid rgb(145, 144, 144);
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    margin-left: 50px;
+}
+
+.border-inpicture-2 {
+    border: 3px solid rgb(145, 144, 144);
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    margin-left: 50px;
+
+}
+
+.texthead {
+    font-family: Roboto;
+    font-size: 36px;
+    margin-top: 40px;
+}
+
+.picturetrval {
+    position: relative;
+    /* Thêm các thuộc tính CSS khác tùy theo cần thiết */
+}
+
+.image-container {
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.image-container img {
+    transition: transform 0.3s;
+}
+
+.image-container:hover {
+    transform: scale(1.1);
+}
+
+.image-container:hover img {
+    transform: scale(1.1);
+}
+
+.hover-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(245, 244, 244, 0.5);
+    color: #fff;
+    padding: 8px;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.3s;
+}
+
+.image-container:hover .hover-text {
+    transform: translateY(0);
+}
